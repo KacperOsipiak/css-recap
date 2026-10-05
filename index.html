@@ -1,60 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+ 
     <title>VOID AUDIO™ — VOID//01</title>
-</head>
-<body>
-    <!-- TODO: Verander de div naar het juiste element -->
-    <header class="site-header">
-        <a class="logo" href="#top">VOID AUDIO™</a>
-        <!-- TODO: Verander de div naar het juiste element -->
-        <nav>
-            <a href="#product">VOID//01</a>
-            <a href="#sound">SOUND</a>
-            <a href="#about">ABOUT</a>
-            <a href="#shop">CART / 00</a>
-        </nav>
+  </head>
+  <body>
+    <header class="siteHeader">
+      <a class="siteHeaderBrand" href="#top">VOID AUDIO™</a>
+ 
+      <nav class="siteHeaderNav" aria-label="Main navigation">
+        <a href="#product">VOID//01</a>
+        <a href="#sound">SOUND</a>
+        <a href="#about">ABOUT</a>
+        <a class="siteHeaderCart" href="#shop">CART / 00</a>
+      </nav>
     </header>
-
-    </header>
-
-    <section id="top">
-        <!-- TODO: Verander de div naar het juiste element -->
-        <section class="hero">
-            <p class="hero-reference small-label">
-                REF: VA-01-BLK-2026<br>
-                40H BATTERY<br>
-                ANC ENABLED
-            </p>
-
-            <p>
-                VOID//01 — WIRELESS HEADPHONES
-            </p>
-
-            <h1>
-                TOO LOUD<br>
-                <em>IS A SETTING.</em>
-            </h1>
-
-            <div>
-
-                <div>
-                    <p>VOID//01 WIRELESS</p>
-                    <p>€179</p>
-                </div>
-
-                <a href="#shop">
-                    SHOP
-                    <span>→</span>
-                </a>
-
+ 
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="heroSpec">REF: VA-01-BLK-2026 / 40H BATTERY / ANC ENABLED</p>
+ 
+        <p class="heroEyebrow">VOID//01 — WIRELESS HEADPHONES</p>
+ 
+        <div class="heroContent">
+          <h1 id="hero-title">
+            TOO LOUD<br />
+            <em>IS A SETTING.</em>
+          </h1>
+ 
+          <div class="heroPurchase">
+            <div class="heroPrice">
+              <p>VOID//01 WIRELESS</p>
+              <p>€179</p>
             </div>
-        </section>
-    </section>
-</body>
-
+ 
+            <button class="heroShop" type="button">
+              SHOP <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
+ 

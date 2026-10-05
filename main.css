@@ -1,14 +1,234 @@
+/* ========================================
+   VARIABELEN
+======================================== */
+ 
 :root {
-
+  --void-black: #080808;
+  --bone: #f0efe7;
+  --acid-lime: #c8ff00;
+  --raw-silver: #aaaaaa;
+  --dark-grey: #292929;
 }
-
-*{
-    box-sizing: border-box;
+ 
+/* ========================================
+   RESET
+======================================== */
+ 
+* {
+  box-sizing: border-box;
 }
-
+ 
 body,
 h1,
 h2,
-p{
-    margin: 0;
+p {
+  margin: 0;
+}
+ 
+body {
+  min-width: 320px;
+  background: var(--void-black);
+  color: var(--bone);
+  font-family: "Arial Narrow", "Franklin Gothic Condensed", Impact, sans-serif;
+}
+ 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+.siteHeader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 clamp(1rem, 2.7vw, 2.5rem);
+  border-bottom: 1px solid var(--dark-grey);
+  background: #080808;
+}
+ 
+.siteHeaderBrand {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+ 
+.siteHeaderNav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  color: #777;
+  font-family: "Courier New", monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+ 
+.siteHeaderNav a {
+  white-space: nowrap;
+}
+ 
+.siteHeaderCart {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--bone);
+  color: var(--bone);
+}
+ 
+.hero {
+  position: relative;
+  display: flex;
+  min-height: calc(100svh - 50px);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(2rem, 4vw, 4rem);
+  background-color: #050505;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.62) 48%,
+      rgba(0, 0, 0, 0.48) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.55), transparent 55%),
+    url("assets/headphones.avif");
+  background-position: center;
+  background-size: cover;
+}
+ 
+.heroSpec {
+  position: absolute;
+  top: clamp(1.25rem, 3vw, 2rem);
+  right: clamp(1rem, 2.7vw, 2.5rem);
+  max-width: 18rem;
+  color: #777;
+  font-family: "Courier New", monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  text-align: right;
+}
+ 
+.heroEyebrow {
+  position: absolute;
+  left: clamp(1rem, 4vw, 4rem);
+  top: 50%;
+  color: #666;
+  font-family: "Courier New", monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+ 
+.heroContent {
+  position: relative;
+  width: 100%;
+  max-width: 76rem;
+  margin-left: clamp(0rem, 1vw, 1rem);
+}
+ 
+.hero h1 {
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 1000;
+  letter-spacing: 0;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+ 
+.hero h1 em {
+  color: var(--acid-lime);
+  font-style: italic;
+}
+ 
+.heroPurchase {
+  display: flex;
+  align-items: flex-end;
+  gap: clamp(2rem, 5vw, 4rem);
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+}
+ 
+.heroPrice p:first-child {
+  margin-bottom: 0.45rem;
+  color: #888;
+  font-family: "Courier New", monospace;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+}
+ 
+.heroPrice p:last-child {
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+ 
+.heroShop {
+  display: inline-flex;
+  min-width: 8.25rem;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  border: 0;
+  background: var(--acid-lime);
+  color: #080808;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+ 
+.heroShop span {
+  font-size: 1.15rem;
+}
+ 
+@media (max-width: 700px) {
+  .siteHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+ 
+  .siteHeaderNav {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-size: 0.55rem;
+  }
+ 
+  .hero {
+    min-height: calc(100svh - 78px);
+    padding: 2rem 1.25rem;
+    background-position: 58% center;
+  }
+ 
+  .heroSpec {
+    top: 1rem;
+    right: 1rem;
+    max-width: 13rem;
+    font-size: 0.5rem;
+  }
+ 
+  .heroEyebrow {
+    display: none;
+  }
+ 
+  .heroContent {
+    margin-top: 2rem;
+  }
+ 
+  .hero h1 {
+    font-size: clamp(3.6rem, 16vw, 7rem);
+  }
+ 
+  .heroPurchase {
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
 }
